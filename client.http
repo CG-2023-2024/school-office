@@ -1,0 +1,43 @@
+DELETE http://localhost:8080/person/1
+Accept: application/json
+
+###
+GET http://localhost:8080/person/2
+Accept: application/json
+
+###
+GET http://localhost:8080/person
+Accept: application/json
+
+###
+ PUT http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "firstName": "Waldemar",
+  "secondName": "Groch",
+  "birthDate": "1977-08-13",
+  "addresses": [
+    {
+      "street": "Kołobrzeska",
+      "houseNumber": "34D",
+      "flatNumber": 1,
+      "postalCode": "82-988",
+      "city": "Gdańsk",
+      "country": "Poland",
+      "addressType": "STALY"
+    }
+  ]
+}
+
+###
+POST localhost:8080/person
+Content-Type: application/json
+
+{
+  "firstName": "Michał",
+  "secondName": "Hoffmann",
+  "birthDate": "1977-08-13"
+}
+
+
